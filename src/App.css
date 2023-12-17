@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.skeletalloadingMain {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.skeletalLoadingBar {
+    background-color: rgb(150, 145, 145);
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 10px;
+    animation: skeleton 1s ease-in-out infinite;
+}
+
+
+
+@keyframes skeleton {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}
