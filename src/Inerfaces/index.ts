@@ -19,8 +19,8 @@ export interface iIcon {
 
 export interface iTotalRevenue extends iHeading {
     years: string[],
-    months: string[],
-    verticalValues: number[]
+    months?: string[],
+    verticalValues?: number[]
 }
 
 export interface iProjectReport extends iHeading {
@@ -55,9 +55,14 @@ export interface iHeading {
     heading: string
 }
 
-export interface iTabsData {
+export interface iTabs {
     headings: string[],
-    data: iTabs[],
+    data: iTabsData[],
+}
+export interface iTabsData {
+    amount: number,
+    progressPercentage: number,
+    differenceToPreviousWeek: number
 }
 
 export interface iOrderStatisticsData extends iHeading {
@@ -66,11 +71,7 @@ export interface iOrderStatisticsData extends iHeading {
     value: number
 }
 
-export interface iTabs {
-    amount: number,
-    progressPercentage: number,
-    differenceToPreviousWeek: number
-}
+
 
 export interface iSideBarData {
     heading: string,

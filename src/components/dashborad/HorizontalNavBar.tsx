@@ -7,7 +7,7 @@ import ProfilePicture from "../../assets/images/profileIPicture.png"
 
 const HorizontalNavBar = () => {
     return (
-        <main className="bg-white flex relative p-3 m-3 mt-0 border-2 border-slate-200 rounded-md min-w-[450px]" style={{}}>
+        <main className="bg-white flex relative p-3 m-3 ml-0 mr-0 mt-0 border-2 border-slate-200 rounded-md min-w-[450px] w-full" style={{}}>
             <section className="flex">
                 <div className="relative top-1 text-slate-500 ml-3 mr-4" ><BiSearch /></div>
                 <input type="text" placeholder="Search"></input>
@@ -16,7 +16,7 @@ const HorizontalNavBar = () => {
                 <div className="mt-1 mr-3"><FaGithub /></div>
                 <div className="mt-1 mr-3"><MdOutlineNotifications /></div>
                 <div className="mt-1 mr-3"><MdLightMode /></div>
-                <div className="w-9 relative bottom-3"><img src={ProfilePicture}></img></div>
+                <div className="w-9 relative bottom-3 mr-3" ><img src={ProfilePicture}></img></div>
             </section>
         </main>
     )

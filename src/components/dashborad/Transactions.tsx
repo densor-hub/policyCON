@@ -13,7 +13,7 @@ const transactionsData: iTransactionData[] = [
 ]
 const Trasactions = ({ heading }: iHeading) => {
     return (
-        <main className="w-full bg-white min-w-[450px]">
+        <main className="w-full bg-white min-w-[350px] rounded-xl border-2 border-slate-200">
             <div className="flex justify-between p-5" >
                 <span className="font-semibold text-slate-500">  {heading}</span> <SlOptionsVertical className="text-slate-500 hover:text-indigo-300" />
             </div>

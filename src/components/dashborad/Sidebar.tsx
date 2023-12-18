@@ -35,7 +35,7 @@ const sidebarData: iSideBarData[] = [
 const Sidebar = () => {
     const { pathname } = useLocation();
     return (
-        <main className="w-40 xl:w-60 bg-white">
+        <main className="w-40 xl:w-52 bg-white">
             <div className="flex w-[80%] mx-auto pt-2 pb-2" >
                 <img src={SneatLoggo} className="w-7 h-7" />
                 <div className="font-semibold text-slate-600 text-2xl" >
@@ -51,8 +51,8 @@ const Sidebar = () => {
                         <div>{item?.data?.map((data, key) => {
                             const Icon = data?.icon
                             return (
-                                <div key={key} style={{ borderRadius: "5px" }} className="p-2 w-[90%] mx-auto text-slate-500 text-sm font-semibold hover:bg-indigo-100 hover:text-indigo-500 " >
-                                    <Link to={data?.path} className="flex" >
+                                <div key={key} className="rounded-xl  w-[90%] mx-auto text-slate-500 text-sm font-semibold hover:bg-indigo-100 hover:text-indigo-500 mb-2" >
+                                    <Link to={data?.path} className="flex p-2">
                                         <Icon style={{ color: "#6366f1", margin: "5px" }} />
                                         <span className="relative top-0.5">{data?.label}</span>
                                     </Link>

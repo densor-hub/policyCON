@@ -5,7 +5,7 @@ import { iProjectReport } from "../../Inerfaces";
 
 const ProfileReport = ({ heading, year, progressPercentage, amount }: iProjectReport) => {
     return (
-        <main className="flex bg-white w-full">
+        <main className="flex bg-white w-full h-[100px] border-2 border-slate-200 rounded-lg">
             <section className="text-sm- ml-3 w-[150px]">
                 <div className="text-slate-500 font-normal text-lg">{heading}</div>
                 <div className="bg-amber-100 rounded-md text-center uppercase text-amber-500 font-semibold text-[11px] mb-3 w-20">Year {year}</div>

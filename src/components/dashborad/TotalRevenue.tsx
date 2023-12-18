@@ -3,9 +3,9 @@ import TotalRevenueChart from "../../charts/TotalRevenueCharts";
 import React from "react";
 import { iTotalRevenue } from "../../Inerfaces";
 
-const TotalRevenue = ({ heading, years, months, verticalValues }: iTotalRevenue) => {
+const TotalRevenue = ({ heading, years }: iTotalRevenue) => {
     return (
-        <main className="" style={{ borderTopRightRadius: "0", borderBottomRightRadius: "0" }}>
+        <main className="min-w-[450px] h-[290px] w-full" style={{ borderTopRightRadius: "0", borderBottomRightRadius: "0" }}>
             <div className="flex justify-between p-5" >
                 <span className="font-semibold text-slate-500">  {heading}</span> <SlOptionsVertical className="text-slate-500 hover:text-indigo-300" />
             </div>
@@ -20,39 +20,43 @@ const TotalRevenue = ({ heading, years, months, verticalValues }: iTotalRevenue)
                 })}
             </section>
 
-            <TotalRevenueChart />
+            <CustomRevenueChart verticalValues={[30, 20, 10, 0, -10, -20]} horizontalValues={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']} />
+            {/* <TotalRevenueChart/> */}
         </main>
     )
 }
 
 export default TotalRevenue
 
-// <section className="relative ml-3 " >
-//                 <section className="absolute">
-//                     {/* sadadasd
-//                     dsadasd
-//                     dsfdfsd
-//                     fefre */}
-//                 </section>
-//                 <section className="relative text-xs">
-//                     <div>
-//                         {verticalValues?.map((value) => {
-//                             return (
-//                                 <div className="h-7 border-slate-500" style={{ borderBottom: "1px solid #d1d5db" }}>
-//                                     {value}
-//                                 </div>
-//                             )
-//                         })}
-//                     </div>
-//                     <section className="flex w-full text-xs">
-//                         {months?.map(month => {
-//                             return <div className="w-full text-right" >
-//                                 <span className="relative right-2">
-//                                     {month}
-//                                 </span>
-//                             </div>
-//                         })}
-//                     </section>
-//                 </section>
+const CustomRevenueChart = ({ verticalValues, horizontalValues }) => {
+    return (
+        <section className="relative ml-3 " >
+            <section className="absolute">
+                {/* sadadasd
+                        dsadasd
+                        dsfdfsd
+                        fefre */}
+            </section>
+            <section className="relative text-xs">
+                <div>
+                    {verticalValues?.map((value: any, key: number) => {
+                        return (
+                            <div key={key} className="h-7 border-slate-200  text-slate-400 border-b-[1px] ">
+                                {value}
+                            </div>
+                        )
+                    })}
+                </div>
+                <section className="flex w-full text-xs">
+                    {horizontalValues?.map((value: any, key: number) => {
+                        return <div key={key} className="w-full text-right text-slate-400" >
+                            <span className="relative right-2">
+                                {value}
+                            </span>
+                        </div>
+                    })}
+                </section>
+            </section>
 
-//             </section>
+        </section>)
+}

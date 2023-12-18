@@ -18,7 +18,7 @@ const ProgressCard = ({ icon, title, progressPercentage, amount }: iProgessCard)
             </div>
             <div className="pl-4 capitalize text-slate-400">{title}</div>
             <div className="flex font-normal text-slate-500 text-xl"  >
-                <FaDollarSign className="relative top-1 ml-3" /><span>{amount}</span>
+                <FaDollarSign className="relative top-1 ml-3" /><span>{amount?.toLocaleString()}</span>
             </div>
             <div className="flex mt-2 mb-3 pl-4 text-xs">
                 {Number(progressPercentage) > 0 ? <FaArrowUp size={10} className="relative top-[2px] mr-1 text-lime-500" /> : <FaArrowDown size={10} className="relative top-[2px] mr-1 text-red-500" />}

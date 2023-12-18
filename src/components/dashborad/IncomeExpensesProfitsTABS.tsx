@@ -2,9 +2,9 @@ import { FaDollarSign } from "react-icons/fa6";
 import { FaArrowUp } from "react-icons/fa";
 import React from "react";
 import IncomeExpenseProfitTabsChart from "../../charts/IncomeExpensesProfitsTABScharts";
-import { iTabsData } from "../../Inerfaces";
+import { iTabs, iTabsData } from "../../Inerfaces";
 
-const tabsData: iTabsData = {
+const tabsData: iTabs = {
     headings: ["Income", "Expenses", "Profit"],
     data: [
         { amount: 459.1, progressPercentage: 65, differenceToPreviousWeek: -39 },
@@ -12,14 +12,14 @@ const tabsData: iTabsData = {
 }
 const Tabs = () => {
     return (
-        <main className="bg-white ml-3 mr-3">
-            <div className="flex w-fit mx-auto">
+        <main className="bg-white ml-3 mr-3 border-2 border-slate-200 rounded-xl min-w-[330px] w-full">
+            <div className="flex w-fit mx-auto mt-4">
                 {tabsData?.headings?.map((heading: string, index: number) => {
-                    return <button key={index} className="p-2 ml-1 mr-1 rounded-md hover:bg-blue-600 hover:text-white" >{heading}</button>
+                    return <button key={index} className={index == 0 ? "h-8 px-2  ml-1 mr-1 rounded-md bg-blue-600 text-white" : "h-8 px-2  ml-1 mr-1 rounded-md hover:bg-blue-600 hover:text-white"} >{heading}</button>
                 })}
             </div>
             <section className="ml-3">
-                {tabsData?.data?.map((data, index) => {
+                {tabsData?.data?.map((data: iTabsData, index: number) => {
                     return (
                         <div key={index}>
                             <div>Total {tabsData?.headings[index]} </div>

@@ -1,9 +1,10 @@
 import { iCongratulationsMessage } from "../../Inerfaces"
 import Avatar from "../../assets/images/Avatar.png"
 import React from "react"
-const ProgressReport = ({ name, progressPercentage }: iCongratulationsMessage) => {
+
+const CongratulationsMessage = ({ name, progressPercentage }: iCongratulationsMessage) => {
     return (
-        <main className="flex bg-white p-5 text-sm rounded-xl border-2 border-slate-200 lg:h-[175px] min-w-[450px] xl:min-w-[670px] w-full" >
+        <main className="flex justify-between bg-white p-5 text-sm rounded-xl border-2 border-slate-200 lg:h-[178px] min-w-[450px] xl:min-w-[670px] w-full" >
             <section className="pr-24">
                 <article className="text-sm text-slate-400">
                     <header className="text-xl font-semibold text-indigo-400 pb-6">
@@ -23,4 +24,4 @@ const ProgressReport = ({ name, progressPercentage }: iCongratulationsMessage) =
     )
 }
 
-export default ProgressReport
+export default CongratulationsMessage

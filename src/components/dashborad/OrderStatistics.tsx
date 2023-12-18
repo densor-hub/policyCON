@@ -15,7 +15,7 @@ const OrderStatisticsData: iOrderStatisticsData[] = [
 ]
 const OrderStatistics = ({ heading, totalSales, totalOrders, weeklyPercentage }: iOrderStatistics) => {
     return (
-        <main className="bg-white min-w-[300px] w-full" >
+        <main className="bg-white  min-w-[330px] w-full rounded-xl border-2 border-slate-200" >
             <div className="mb-7">
                 <div className="flex justify-between p-5" >
                     <span className="font-semibold text-slate-500">  {heading}</span> <SlOptionsVertical className="text-slate-500 hover:text-indigo-300" />
@@ -24,13 +24,16 @@ const OrderStatistics = ({ heading, totalSales, totalOrders, weeklyPercentage }:
             </div>
             <section className="flex ml-3 justify-between items-stretch text-slate-400 relative">
                 <div >
-                    <div className="font-semibold text-slate-500">{totalOrders}</div>
+                    <div className="font-semibold text-slate-500">{totalOrders?.toLocaleString()}</div>
                     <div className="text-xs">Total Orders</div>
                 </div>
-                <section className=" relative bottom-4">
+                <section className=" relative bottom-4 right-4" >
                     <OrderStatisticsChart />
-                    {/* <div>{weeklyPercentage}%</div>
-                    <div>Weekly</div> */}
+                    <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <div className="font-semibold">{weeklyPercentage}%</div>
+                        <div className="text-[11px]">Weekly</div>
+                    </div>
+
                 </section>
             </section>
             <section>
