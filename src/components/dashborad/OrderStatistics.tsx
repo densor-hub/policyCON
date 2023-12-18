@@ -15,7 +15,7 @@ const OrderStatisticsData: iOrderStatisticsData[] = [
 ]
 const OrderStatistics = ({ heading, totalSales, totalOrders, weeklyPercentage }: iOrderStatistics) => {
     return (
-        <main className="bg-white  min-w-[330px] w-full rounded-xl border-2 border-slate-200" >
+        <main className="bg-white  min-w-[330px] w-full rounded-xl border-2 border-slate-200 h-full" >
             <div className="mb-7">
                 <div className="flex justify-between p-5" >
                     <span className="font-semibold text-slate-500">  {heading}</span> <SlOptionsVertical className="text-slate-500 hover:text-indigo-300" />

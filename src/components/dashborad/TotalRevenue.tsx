@@ -5,7 +5,7 @@ import { iTotalRevenue } from "../../Inerfaces";
 
 const TotalRevenue = ({ heading, years }: iTotalRevenue) => {
     return (
-        <main className="min-w-[450px] h-[290px] w-full" style={{ borderTopRightRadius: "0", borderBottomRightRadius: "0" }}>
+        <main className=" h-[290px] w-full" style={{ borderTopRightRadius: "0", borderBottomRightRadius: "0" }}>
             <div className="flex justify-between p-5" >
                 <span className="font-semibold text-slate-500">  {heading}</span> <SlOptionsVertical className="text-slate-500 hover:text-indigo-300" />
             </div>

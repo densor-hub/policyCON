@@ -7,7 +7,7 @@ import { iProgessCard } from "../../Inerfaces";
 const ProgressCard = ({ icon, title, progressPercentage, amount }: iProgessCard) => {
     const Icon = icon?.icon
     return (
-        <main className="w-[170px] h-[180px] bg-white border-2 border-slate-200 rounded-lg">
+        <main className="min-w-[170px] w-full h-[180px] bg-white border-2 border-slate-200 rounded-lg">
             <div className="flex p-2 justify-between mt-5">
                 <div className="relative left-3 ">
                     <Icon size={icon?.size} style={{ color: `${icon?.color}`, backgroundColor: `${icon?.backgroundColor}`, padding: "3px", borderRadius: "5px" }} />

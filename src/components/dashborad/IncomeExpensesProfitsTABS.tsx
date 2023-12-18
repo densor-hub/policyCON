@@ -12,7 +12,7 @@ const tabsData: iTabs = {
 }
 const Tabs = () => {
     return (
-        <main className="bg-white ml-3 mr-3 border-2 border-slate-200 rounded-xl min-w-[330px] w-full">
+        <main className="bg-white border-2 border-slate-200 rounded-xl min-w-[330px] w-full h-full">
             <div className="flex w-fit mx-auto mt-4">
                 {tabsData?.headings?.map((heading: string, index: number) => {
                     return <button key={index} className={index == 0 ? "h-8 px-2  ml-1 mr-1 rounded-md bg-blue-600 text-white" : "h-8 px-2  ml-1 mr-1 rounded-md hover:bg-blue-600 hover:text-white"} >{heading}</button>
