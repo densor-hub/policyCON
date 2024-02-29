@@ -2,7 +2,7 @@ import { iCongratulationsMessage } from "../../Inerfaces"
 import Avatar from "../../assets/images/Avatar.png"
 import React from "react"
 
-const CongratulationsMessage = ({ name, progressPercentage }: iCongratulationsMessage) => {
+const CongratulationsMessage: React.FC<{name: string, progressPercentage: number | string}> = ({ name, progressPercentage }: iCongratulationsMessage) => {
     return (
         <main className="flex justify-between bg-white p-5 text-sm rounded-xl border-2 border-slate-200 lg:h-[178px] min-w-[450px] xl:min-w-[670px] w-full" >
             <section className="pr-24">

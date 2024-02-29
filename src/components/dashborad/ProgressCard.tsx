@@ -2,9 +2,10 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { FaDollarSign } from "react-icons/fa6";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import React from "react";
-import { iProgessCard } from "../../Inerfaces";
+import { iProgessCard, iIcon } from "../../Inerfaces";
 
-const ProgressCard = ({ icon, title, progressPercentage, amount }: iProgessCard) => {
+
+const ProgressCard : React.FC<{icon: iIcon, title: string, progressPercentage: number, amount: number}> = ({ icon, title, progressPercentage, amount }: iProgessCard) => {
     const Icon = icon?.icon
     return (
         <main className="min-w-[170px] w-full h-[180px] bg-white border-2 border-slate-200 rounded-lg">

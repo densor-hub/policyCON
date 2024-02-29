@@ -6,16 +6,16 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
-import Dashboard from "./pages/Dashboard";
-import LoginPage from "./pages/LoginPage";
+import Dashboard from "./views/Dashboard";
+import LoginPage from "./views/LoginPage";
 import React from "react";
 
-const App = () => {
+const App: React.FC = () => {
   return <RouterProvider router={router}></RouterProvider>;
 };
 export default App;
 
-const Root = () => {
+const Root: React.FC = () => {
   return (
     <main>
       <Routes>

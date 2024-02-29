@@ -5,7 +5,7 @@ import React from "react";
 import { MdOutlineNotifications, MdLightMode } from "react-icons/md";
 import ProfilePicture from "../../assets/images/profileIPicture.png"
 
-const HorizontalNavBar = () => {
+const HorizontalNavBar : React.FC = () => {
     return (
         <main className="bg-white flex relative p-3 m-3 ml-0 mr-0 mt-0 border-2 border-slate-200 rounded-md min-w-[450px] w-full" style={{}}>
             <section className="flex">

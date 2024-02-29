@@ -32,7 +32,7 @@ const sidebarData: iSideBarData[] = [
     }
 ]
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
     const { pathname } = useLocation();
     return (
         <main className="w-40 xl:w-52 bg-white">

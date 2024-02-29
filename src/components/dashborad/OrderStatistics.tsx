@@ -13,7 +13,7 @@ const OrderStatisticsData: iOrderStatisticsData[] = [
     { icon: { icon: BiHome, size: 30, backgroundColor: "#cffafe", color: "#22d3ee" }, heading: "Decor", items: ["Fine Art", "Dinning"], value: 23800 },
     { icon: { icon: IoMdFootball, size: 30, backgroundColor: "#f1f5f9", color: "#94a3b8" }, heading: "Sports", items: ["Football", "Cricket", "Kit"], value: 23800 }
 ]
-const OrderStatistics = ({ heading, totalSales, totalOrders, weeklyPercentage }: iOrderStatistics) => {
+const OrderStatistics : React.FC<{heading: string, totalSales:  number, totalOrders:  number, weeklyPercentage:  number, }> = ({ heading, totalSales, totalOrders, weeklyPercentage }: iOrderStatistics) => {
     return (
         <main className="bg-white  min-w-[330px] w-full rounded-xl border-2 border-slate-200 h-full" >
             <div className="mb-7">

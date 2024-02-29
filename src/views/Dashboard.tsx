@@ -14,7 +14,7 @@ import { FaPaypal } from "react-icons/fa6";
 import { BiCreditCard } from "react-icons/bi"
 import React from "react"
 
-const Dashboard = () => {
+const Dashboard : React.FC = () => {
     return (
         <main className="min-w-fit  flex w-[100vw] bg-slate-100 min-h-screen">
             <Sidebar />
@@ -39,7 +39,7 @@ const Dashboard = () => {
                         <TotalRevenue
                             heading={"Total Revenue"}
                             years={["2021", "2022"]}
-                            months={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
+                            // months={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
                             verticalValues={[30, 20, 10, 0, -10, -20]}
                         />
                         <div className="flex items-center justify-center" >

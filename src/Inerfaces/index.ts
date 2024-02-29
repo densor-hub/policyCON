@@ -73,7 +73,7 @@ export interface iOrderStatisticsData extends iHeading {
 
 
 
-export interface iSideBarData {
+export interface iMenuData {
     heading: string,
     data: {
         label: string,

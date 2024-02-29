@@ -3,7 +3,7 @@ import TotalRevenueChart from "../../charts/TotalRevenueCharts";
 import React from "react";
 import { iTotalRevenue } from "../../Inerfaces";
 
-const TotalRevenue = ({ heading, years }: iTotalRevenue) => {
+const TotalRevenue : React.FC<{heading : string, years?: string[],  verticalValues?: number[]}> = ({ heading, years }: iTotalRevenue) => {
     return (
         <main className=" h-[290px] w-full" style={{ borderTopRightRadius: "0", borderBottomRightRadius: "0" }}>
             <div className="flex justify-between p-5" >

@@ -4,8 +4,9 @@ import BgLeft from "../assets/images/loginBgLeft.png"
 import BgRight from "../assets/images/loginBgRight.png"
 import { useNavigate } from "react-router-dom"
 import React from "react"
+import CustomInput from "../components/shared/customInput"
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
     const navigateTo = useNavigate()
     return (
         <main className="w-full min-h-screen h-[530px]  relative overflow-y-hidden" >
@@ -43,22 +44,3 @@ const LoginPage = () => {
 export default LoginPage
 
 
-
-const CustomInput = ({ placeholder }) => {
-    return (
-        <div className=" mx-auto w-[70%] flex px-3 py-3 mb-5 bg-white rounded-lg" >
-            <input placeholder={placeholder} className="w-[92%]"></input>
-            <Options />
-        </div>
-    )
-}
-
-const Options = () => {
-    return (
-        <main className="bg-slate-400 flex w-fit px-1 py-0 rounded-md justify-center items-center">
-            <div className="h-1 w-1 rounded-full bg-white ml-[1px]"></div>
-            <div className="h-1 w-1 rounded-full  bg-white ml-[1px]"></div>
-            <div className="h-1 w-1 rounded-full  bg-white ml-[2px]"></div>
-        </main>
-    )
-}

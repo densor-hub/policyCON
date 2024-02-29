@@ -3,7 +3,7 @@ import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import React from "react";
 import { iProjectReport } from "../../Inerfaces";
 
-const ProfileReport = ({ heading, year, progressPercentage, amount }: iProjectReport) => {
+const ProfileReport: React.FC<{ heading : string, year: string, progressPercentage: number, amount : number}> = ({ heading, year, progressPercentage, amount }: iProjectReport) => {
     return (
         <main className="flex justify-between bg-white w-full h-[100px] border-2 border-slate-200 rounded-lg">
             <section className="text-sm- ml-3 w-[150px]">

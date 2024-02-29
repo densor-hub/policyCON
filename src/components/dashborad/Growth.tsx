@@ -9,7 +9,7 @@ const growthData: iGrowthData[] = [
     { year: "2022", icon: { icon: BiDollar, size: 25, backgroundColor: "#e0e7ff", color: "#6366f1" }, amount: 41.2, overallGrowth: 78, companyGrowth: 62 },
     { year: "2023", icon: { icon: LuWallet, size: 30, backgroundColor: "#cffafe", color: "#22d3ee" }, amount: 32.5, overallGrowth: 78, companyGrowth: 62 }
 ]
-const Growth = () => {
+const Growth: React.FC = () => {
     const [selectedData, setSelctedData] = useState<iGrowthData>(
         {
             year: "2022",
@@ -24,7 +24,7 @@ const Growth = () => {
         <main className="w-[220px] border-0 border-slate-200 bg-white rounded-xl" style={{ borderTopLeftRadius: "0", borderBottomLeftRadius: "0", borderLeft: "1px solid #e5e7eb" }} >
             <section className="bg-indigo-100 text-indigo-400 w-fit rounded-md h-[25px] text-sm mx-auto mt-7">
                 <button onClick={() => { setShowYearsDropDown(true) }} className="flex">{selectedData?.year} <MdKeyboardArrowDown /></button>
-                {showYearsDropDown && growthData?.map((data, key) => {
+                {showYearsDropDown && growthData?.map((data : iGrowthData , key: number) => {
                     return (
                         <div key={key} className="bg-indigo-400 text-white z-1 hover:bg-indigo-300">
                             <button onClick={() => {
@@ -42,7 +42,7 @@ const Growth = () => {
                 {selectedData?.companyGrowth}% Company Growth
             </div>
             <section className="flex ml-5">
-                {growthData?.map((growth, index) => {
+                {growthData?.map((growth : iGrowthData, index: number) => {
                     const Icon = growth?.icon?.icon
                     return (
                         <div key={index} className="ml-4 ">

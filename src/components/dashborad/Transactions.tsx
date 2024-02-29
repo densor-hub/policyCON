@@ -11,7 +11,7 @@ const transactionsData: iTransactionData[] = [
     { source: "Wallet", heading: "Starbucks", amount: 203.33, currency: "USD", boxColor: "#dcfce7" },
     { source: "Master card", heading: "Ordered food", amount: 92.45, currency: "USD", boxColor: "#ede9fe" }
 ]
-const Trasactions = ({ heading }: iHeading) => {
+const Trasactions :React.FC<{heading : string}>= ({ heading }: iHeading) => {
     return (
         <main className="w-full bg-white min-w-[350px] rounded-xl border-2 border-slate-200">
             <div className="flex justify-between p-5" >

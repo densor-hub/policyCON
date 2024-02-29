@@ -10,7 +10,7 @@ const tabsData: iTabs = {
         { amount: 459.1, progressPercentage: 65, differenceToPreviousWeek: -39 },
     ]
 }
-const Tabs = () => {
+const Tabs: React.FC = () => {
     return (
         <main className="bg-white border-2 border-slate-200 rounded-xl min-w-[330px] w-full h-full">
             <div className="flex w-fit mx-auto mt-4">
