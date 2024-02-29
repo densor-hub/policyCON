@@ -6,13 +6,13 @@ import { GoPersonAdd, GoPeople } from "react-icons/go";
 import SneatLoggo from "../../assets/images/sneatIcon.png";
 import { useLocation } from "react-router-dom";
 import React from "react";
-import { iSideBarData } from "../../Inerfaces";
+import { iMenuData } from "../../Inerfaces";
 
-const sidebarData: iSideBarData[] = [
+const sidebarData: iMenuData[] = [
     {
         heading: "",
         data:
-            [{ label: "Dashboard", icon: BiHome, path: "/dashboard" },
+            [
             { label: "Account Settings", icon: GrUserSettings, path: "" }
             ]
     },
@@ -20,16 +20,16 @@ const sidebarData: iSideBarData[] = [
         heading: "Pages",
         data:
             [{ label: "Login", icon: RiLoginBoxLine, path: "/" },
-            { label: "Register", icon: GoPersonAdd, path: "/" }
+            // { label: "Dashboard", icon: BiHome, path: "/dashboard" },
             ]
     },
-    {
-        heading: "About us",
-        data:
-            [{ label: "About us", icon: GoPeople, path: "/about-us" },
+    // {
+    //     heading: "About us",
+    //     data:
+    //         [{ label: "About us", icon: GoPeople, path: "/about-us" },
 
-            ]
-    }
+    //         ]
+    // }
 ]
 
 const Sidebar: React.FC = () => {
@@ -42,7 +42,7 @@ const Sidebar: React.FC = () => {
                     sneat
                 </div>
             </div>
-            {sidebarData?.map((item: iSideBarData, index: number) => {
+            {sidebarData?.map((item: iMenuData, index: number) => {
                 return (
                     <div key={index} className={item?.data?.find(elements => {
                         return elements?.path === pathname
