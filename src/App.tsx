@@ -9,7 +9,6 @@ import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import LoginPage from "./pages/LoginPage";
 import React from "react";
-import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return <RouterProvider router={router}></RouterProvider>;
@@ -22,7 +21,6 @@ const Root = () => {
       <Routes>
         <Route path="/" element={<LoginPage />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/about-us" element={<AboutUs />}></Route>
       </Routes>
     </main>
   );
